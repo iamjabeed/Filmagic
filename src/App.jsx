@@ -18,14 +18,19 @@ import SearchResults from "./pages/searchResults/SearchResults";
 const App = () => {
   const dispatch = useDispatch();
   const { url } = useSelector((store) => store.home);
-  console.log(url);
+  // console.log(url);
   useEffect(() => {
-    apiTesting();
+    apiConfiguration();
   }, []);
-  const apiTesting = () => {
-    fetchDataFromApi("/movie/popular").then((res) => {
+  const apiConfiguration = () => {
+    fetchDataFromApi("/configuration").then((res) => {
       // console.log(res);
-      dispatch(getApiConfiguration(res));
+      const url = {
+        backdrop: res?.images?.secure_base_url + "original",
+        poster: res?.images?.secure_base_url + "original",
+        profile: res?.images?.secure_base_url + "original",
+      };
+      dispatch(getApiConfiguration(url));
     });
   };
 

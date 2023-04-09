@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { useNavigate } from "react-router-dom";
+
+import { useSelector } from "react-redux";
+
+import useFetch from "../../../hooks/useFetch";
 const HeroBanner = () => {
   const [background, setBackground] = useState("");
   const [query, setQuery] = useState("");
@@ -13,12 +17,30 @@ const HeroBanner = () => {
 
   const searchQueryHandler = (e) => {
     if (e.key == "Enter" && query.length > 0) {
-      console.log("Entered", query);
+      // console.log("Entered", query);
       navigate(`/search/${query}`);
     } else if (query.length === 0) {
       alert("Please enter movie or TV show name");
     }
   };
+
+  //* Custome hook for fetching api
+
+  const { data, loading } = useFetch("/movie/upcoming");
+  // console.log(data);
+  // console.log(loading);
+
+  //? To access the url in store(redux)
+  const { url } = useSelector((store) => store.home);
+  // console.log(url);
+
+  useEffect(() => {
+    const bg =
+      url?.backdrop +
+      data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
+    setBackground(bg);
+    console.log(bg)
+  }, [data]);
   return (
     <div className="heroBanner">
       <div className="wrapper">
