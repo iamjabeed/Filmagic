@@ -1,0 +1,113 @@
+@import "../../../mixins.scss";
+
+.heroBanner {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  background: var(--black);
+  position: relative;
+  @include md {
+    height: 750px;
+  }
+  .backdrop-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0.5;
+    // z-index: -1;
+    .lazy-load-image-background {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  .opacity-layer {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, #04152d 79.17%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .heroBannerContent {
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    // position: absolute;
+    position: relative;
+    .title {
+      font-size: 50px;
+      font-weight: 700;
+      @include md {
+        font-size: 90px;
+        margin-bottom: 0;
+      }
+    }
+    .sub-title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      @include md {
+        font-size: 24px;
+        margin-bottom: 40px;
+      }
+    }
+    .searchInput {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      input {
+        width: calc(100% - 100px);
+        height: 50px;
+        outline: none;
+        border: none;
+        padding: 0 15px;
+        border-radius: 30px 0 0 30px;
+        font-size: 14px;
+        background: #ffffffe5;
+        @include md {
+          width: calc(100% - 150px);
+          height: 60px;
+          padding: 0 30px;
+          font-size: 20px;
+        }
+      }
+      button {
+        height: 50px;
+        width: 100px;
+        outline: none;
+        border: none;
+        border-radius: 0 30px 30px 0;
+        // padding: 0 15px;
+        background: var(--gradient);
+        // background: #eb0808;
+        cursor: pointer;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        @include md {
+          width: 150px;
+          height: 60px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
