@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { useNavigate } from "react-router-dom";
+import { HiOutlineSearch } from "react-icons/hi";
 
 import { useSelector } from "react-redux";
 
@@ -28,7 +29,7 @@ const HeroBanner = () => {
 
   //* Custome hook for fetching api
 
-  const { data, loading } = useFetch("/movie/upcoming");
+  const { data, loading } = useFetch("/movie/popular");
   // console.log(data);
   // console.log(loading);
 
@@ -67,7 +68,9 @@ const HeroBanner = () => {
               onKeyUp={searchQueryHandler}
               onChange={(e) => setQuery(e.target.value)}
             />
-            <button onClick={searchQueryHandlerOnclick}>Search</button>
+            <button onClick={searchQueryHandlerOnclick}>
+              <HiOutlineSearch size={32}/>
+            </button>
           </div>
         </div>
         {/* </div> */}
