@@ -12,6 +12,7 @@ import Img from "../lazyLoadImg/Img";
 import PosterFallback from "../../assets/no-poster.png";
 
 import "./style.scss";
+import CircleRating from "../circleRating/CircleRating";
 
 const Carousel = ({ data, loading }) => {
   const { url } = useSelector((store) => store.home);
@@ -34,7 +35,7 @@ const Carousel = ({ data, loading }) => {
 
   return (
     <div className="carousel">
-      <ContentWrapper>
+      <ContentWrapper >
         <BsFillArrowLeftCircleFill
           className="carouselLeftNav arrow"
           onClick={() => navigation("left")}
@@ -55,6 +56,7 @@ const Carousel = ({ data, loading }) => {
                 <div key={item.id} className="carouselItem">
                   <div className="posterBlock">
                     <Img src={posterUrl} />
+                    <CircleRating rating={item?.vote_average.toFixed(1)}/>
                   </div>
                   <div className="textBlock">
                     <spam className="title">{item?.name || item?.title}</spam>
