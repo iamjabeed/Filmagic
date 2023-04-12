@@ -14,13 +14,13 @@ const Footer = () => {
   return (
     <footer className="footer">
       <ContentWrapper>
-        {/* <ul className="menuItems">
+        <ul className="menuItems">
           <li className="menuItem">Terms Of Use</li>
           <li className="menuItem">Privacy-Policy</li>
           <li className="menuItem">About</li>
           <li className="menuItem">Blog</li>
           <li className="menuItem">FAQ</li>
-        </ul> */}
+        </ul>
         <div className="infoText">Made with 💛 by Jabeed</div>
         <div className="socialIcons">
           <a

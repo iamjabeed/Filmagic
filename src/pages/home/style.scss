@@ -1,0 +1,20 @@
+.carouselSection {
+  position: relative;
+  margin-bottom: 70px;
+  & > .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .carouselTitle {
+    font-size: 24px;
+    color: #fff;
+    font-weight: normal;
+    transition: all ease .3s;
+    &:hover{
+        opacity: .7;
+        font-style: underline;
+    }
+  }
+}
