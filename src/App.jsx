@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./utils/homeSlice";
 
-
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
@@ -14,7 +13,6 @@ import Details from "./pages/details/Details";
 import NotFound from "./pages/404/NotFound";
 import Explore from "./pages/explore/Explore";
 import SearchResults from "./pages/searchResults/SearchResults";
-
 
 const App = () => {
   const dispatch = useDispatch();
@@ -36,24 +34,24 @@ const App = () => {
     });
   };
 
- 
   const genresCall = async () => {
     let promises = [];
     let endPoints = ["tv", "movie"];
     let allGenres = {};
 
     endPoints.forEach((url) => {
-        promises.push(fetchDataFromApi(`/genre/${url}/list`));
+      promises.push(fetchDataFromApi(`/genre/${url}/list`));
     });
 
     const data = await Promise.all(promises);
+
     // console.log(data);
     data.map(({ genres }) => {
-        return genres.map((item) => (allGenres[item.id] = item));
+      return genres.map((item) => (allGenres[item.id] = item));
     });
 
     dispatch(getGenres(allGenres));
-};
+  };
 
   return (
     <BrowserRouter>

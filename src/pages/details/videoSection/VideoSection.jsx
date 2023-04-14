@@ -43,6 +43,7 @@ const VideosSection = ({ data, loading }) => {
                     />
                     <PlayIcon />
                   </div>
+                  <div className="videoTitle">{video?.name}</div>
                 </div>
               ))}
             </div>
