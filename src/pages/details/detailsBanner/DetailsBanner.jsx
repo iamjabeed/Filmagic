@@ -26,8 +26,8 @@ const DetailsBanner = ({ video, crew }) => {
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
 
   const { url } = useSelector((store) => store.home);
-  console.log(video);
-  console.log(crew);
+  // console.log(video);
+  // console.log(crew);
   // console.log(data);
   // console.log(data?.backdrop_path);
   const toHoursAndMinutes = (totalMinutes) => {
@@ -73,7 +73,7 @@ const DetailsBanner = ({ video, crew }) => {
                     <div className="title">
                       {`${data?.name || data?.title} (${dayjs(
                         data?.release_date
-                      ).format("YYYY")})`}
+                      )?.format("YYYY")})`}
                     </div>
                     <div className="subtitle">{data?.tagline}</div>
 
@@ -129,23 +129,23 @@ const DetailsBanner = ({ video, crew }) => {
                       <div className="info">
                         <span className="text bold">Director: {""}</span>
                         <span className="text">
-                          {director.map((d, i) => (
+                          {director?.map((d, i) => (
                             <span key={i}>
                               {d.name}
-                              {director.length - 1 !== i && ", "}
+                              {director?.length - 1 !== i && ", "}
                             </span>
                           ))}
                         </span>
                       </div>
                     )}
-                    {writer.length > 0 && (
+                    {writer?.length > 0 && (
                       <div className="info">
                         <span className="text bold">Writer: {""}</span>
                         <span className="text">
-                          {writer.map((d, i) => (
+                          {writer?.map((d, i) => (
                             <span key={i}>
                               {d.name}
-                              {writer.length - 1 !== i && ", "}
+                              {writer?.length - 1 !== i && ", "}
                             </span>
                           ))}
                         </span>

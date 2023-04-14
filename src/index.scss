@@ -15,8 +15,9 @@
   // --black: #050206;
   // --black: #191919;
   // --black: #121212;
-  --black: #1f1f1f;
   // --black: #0F0F0F;
+
+  --black: #1f1f1f;
   --black2: #212426;
   --black3: #0f0f0f;
   --black-lighter: #1c4b91;
@@ -55,7 +56,7 @@ body {
 .skeleton {
   position: relative;
   overflow: hidden;
-  background-color: #0a2955;
+  background-color: #636363d4;
   &::after {
     position: absolute;
     top: 0;
@@ -65,10 +66,10 @@ body {
     transform: translateX(-100%);
     background-image: linear-gradient(
       90deg,
-      rgba(#193763, 0) 0,
-      rgba(#193763, 0.2) 20%,
-      rgba(#193763, 0.5) 60%,
-      rgba(#193763, 0)
+      rgba(#2e2d2dd4, 0) 0,
+      rgba(#2e2d2dd4, 0.2) 20%,
+      rgba(#2e2d2dd4, 0.5) 60%,
+      rgba(#2e2d2dd4, 0)
     );
     animation: shimmer 2s infinite;
     content: "";

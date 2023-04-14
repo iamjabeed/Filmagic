@@ -1,6 +1,6 @@
 @import "../../../mixins.scss";
 .detailsBanner {
-  width: 90%;
+  width: 100%;
   background-color: var(--black);
   padding-top: 100px;
   margin-bottom: 50px;
@@ -31,7 +31,7 @@
   .opacity-layer {
     width: 100%;
     height: 250px;
-    background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, #04152d 79.17%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, #1f1f1f 90%);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -60,10 +60,10 @@
     .right {
       color: white;
       .title {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 40px;
         @include md {
-          font-size: 34px;
+          font-size: 28px;
           line-height: 44px;
         }
       }
@@ -72,7 +72,7 @@
         line-height: 24px;
         margin-bottom: 15px;
         font-style: italic;
-        opacity: 0.6;
+        opacity: 0.7;
         @include md {
           font-size: 20px;
           line-height: 28px;
@@ -96,10 +96,10 @@
         }
       }
       .circleRating {
-        max-width: 50px;
-        background-color: var(--black2);
+        max-width: 45px;
+        background-color: var(--black3);
         @include md {
-          max-width: 60px;
+          max-width: 55px;
         }
         .CircularProgressbar-text {
           fill: rgb(255, 255, 255);
@@ -111,7 +111,7 @@
         gap: 20px;
         cursor: pointer;
         svg {
-          width: 45px;
+          width: 40px;
           @include md {
             width: 55px;
           }
@@ -121,21 +121,22 @@
           transition: all 0.7s ease-in-out;
         }
         .triangle {
-          stroke-dasharray: 240;
-          stroke-dashoffset: 480;
+          stroke-dasharray: 340;
+          stroke-dashoffset: 680;
           stroke: white;
           transform: translateY(0);
-          transition: all 0.7s ease-in-out;
+          transition: all .69s ease-in-out;
         }
         .circle {
           stroke: white;
-          stroke-dasharray: 650;
-          stroke-dashoffset: 1300;
+          // stroke-dasharray: 650;
+          // stroke-dashoffset: 1300;
           transition: all .69s ease-in-out;
         }
         &:hover {
           .text {
-            color: var(--pink);
+            // color: var(--pink);
+            opacity: .75;
           }
           .triangle {
             stroke-dashoffset: 0;
@@ -145,7 +146,7 @@
           }
           .circle {
             stroke-dashoffset: 0;
-            stroke: var(--pink);
+            // stroke: var(--pink);
           }
         }
       }

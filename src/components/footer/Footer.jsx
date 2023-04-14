@@ -1,10 +1,7 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+
+import Logo from "../../assets/FilmagicLogo (1).png";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 
@@ -14,36 +11,40 @@ const Footer = () => {
   return (
     <footer className="footer">
       <ContentWrapper>
-        <ul className="menuItems">
-          <li className="menuItem">Terms Of Use</li>
-          <li className="menuItem">Privacy-Policy</li>
-          <li className="menuItem">About</li>
-          <li className="menuItem">Blog</li>
-          <li className="menuItem">FAQ</li>
-        </ul>
-        <div className="infoText">Made with 💛 by Jabeed</div>
-        <div className="socialIcons">
-          <a
-            href="https://instagram.com/iamjabeed_04"
-            target="_blank"
-            className="icon"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://twitter.com/iamlord04"
-            target="_blank"
-            className="icon"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://linkedin.com/in/iamjabeed"
-            target="_blank"
-            className="icon"
-          >
-            <FaLinkedin />
-          </a>
+        <div className="description">
+          <div className="logo">
+            <img src={Logo} alt="Logo" />
+          </div>
+          <div className="content">
+            Millions of movies, TV shows to discover. Explore now.
+          </div>
+        </div>
+
+        <div className="contactDeatils">
+          <div className="infoText">Made with 💛 by Jabeed.</div>
+          <div className="socialIcons">
+            <a
+              href="https://instagram.com/iamjabeed_04"
+              target="_blank"
+              className="icon"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://twitter.com/iamlord04"
+              target="_blank"
+              className="icon"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://linkedin.com/in/iamjabeed"
+              target="_blank"
+              className="icon"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
         </div>
       </ContentWrapper>
     </footer>

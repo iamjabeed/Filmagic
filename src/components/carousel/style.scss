@@ -1,30 +1,30 @@
 @import "../../mixins.scss";
 .carousel {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   .contentWrapper {
     position: relative;
   }
   .carouselTitle {
     font-size: 24px;
-    color: white;
-    margin-bottom: 20px;
+    color: #fff;
+    margin-bottom: 200px;
     font-weight: normal;
   }
   .arrow {
     font-size: 40px;
-    color: rgb(255, 255, 255);
+    color: #fff;
     position: absolute;
     top: 44%;
     transform: translateY(-50%);
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 1;
     z-index: 1;
     display: none;
     @include md {
       display: block;
     }
     &:hover {
-      opacity: 1;
+      opacity: 0.8;
     }
   }
   .carouselLeftNav {
@@ -35,7 +35,7 @@
   }
   .loadingSkeleton {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     overflow-y: hidden;
     margin-right: -20px;
     margin-left: -20px;
@@ -78,7 +78,8 @@
   }
   .carouselItems {
     display: flex;
-    gap: 10px;
+    // border: 2px solid red;
+    gap: 12px;
     overflow-y: hidden;
     margin-right: -20px;
     margin-left: -20px;
@@ -103,6 +104,7 @@
         position: relative;
         width: 100%;
         aspect-ratio: 1 / 1.5;
+        // border: 2px solid red;
         background-size: cover;
         background-position: center;
         margin-bottom: 30px;
@@ -110,7 +112,7 @@
         align-items: flex-end;
         justify-content: space-between;
         padding: 10px;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+        transition: all 0.45s cubic-bezier(0.175, 0.885, 0, 1);
         &:hover {
           transform: scale(1.03, 1.03);
         }
@@ -129,32 +131,40 @@
             object-position: center;
           }
         }
-        .circleRating {
-          width: 40px;
-          height: 40px;
-          position: relative;
-          top: 30px;
-          background-color: white;
-          flex-shrink: 0;
-          @include md {
-            width: 50px;
-            height: 50px;
-          }
-        }
-        .genres {
-          display: none;
-          position: relative;
-          @include md {
-            display: flex;
-            flex-flow: wrap;
-            justify-content: flex-end;
-          }
-        }
       }
       .textBlock {
         color: white;
         display: flex;
         flex-direction: column;
+
+        .ratingGenres {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          margin-top: 20px;
+          .circleRating {
+            width: 35px;
+            height: 35px;
+            position: relative;
+            // top: -250px;
+            background-color: white;
+            flex-shrink: 0;
+            @include md {
+              width: 45px;
+              height: 45px;
+            }
+          }
+          .genres {
+            display: none;
+            position: relative;
+            @include md {
+              display: flex;
+              flex-flow: wrap;
+              justify-content: flex-end;
+            }
+          }
+        }
         .title {
           font-size: 16px;
           margin-bottom: 10px;
