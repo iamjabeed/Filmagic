@@ -57,19 +57,19 @@ const HeroBanner = () => {
 
       <ContentWrapper>
         <div className="heroBannerContent">
-          <span className="title">Welcome to Filmagic 💛</span>
+          <span className="title">Welcome to Filmagic</span>
           <span className="sub-title">
-            Millions of movies, TV shows and people to discover. Explore now.
+            Millions of movies, TV shows to discover. Explore now.
           </span>
           <div className="searchInput">
             <input
               type="text"
-              placeholder="Search for movie or TV show"
+              placeholder="Search for favorite show"
               onKeyUp={searchQueryHandler}
               onChange={(e) => setQuery(e.target.value)}
             />
             <button onClick={searchQueryHandlerOnclick}>
-              <HiOutlineSearch size={32} />
+              <HiOutlineSearch size={24} />
             </button>
           </div>
         </div>

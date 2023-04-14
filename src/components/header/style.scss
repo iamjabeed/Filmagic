@@ -4,23 +4,26 @@
   position: fixed;
   transform: translateY(0);
   width: 100%;
-  height: 14vh;
+  height: 75px;
   z-index: 1;
   display: flex;
   align-items: center;
   transition: all ease 0.5s;
   z-index: 2;
-  &.top {
-    background: rgba(0, 0, 0, 0.519);
-    backdrop-filter: blur(3.5px);
-    -webkit-backdrop-filter: blur(3.5px);
-  }
-  &.show {
-    background-color: var(--black3);
-  }
-  &.hide {
-    transform: translateY(-60px);
-  }
+  background: rgba(0, 0, 0, 0.71);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  // &.top {
+  //   background: rgba(0, 0, 0, 0.657);
+  //   backdrop-filter: blur(3.5px);
+  //   -webkit-backdrop-filter: blur(3.5px);
+  // }
+  // &.show {
+  //   background-color: var(--black3);
+  // }
+  // &.hide {
+  //   transform: translateY(-60px);
+  // }
 
   .contentWrapper {
     display: flex;
@@ -31,7 +34,7 @@
     cursor: pointer;
     img {
       height: 100px;
-    //   width: 80px;
+      //   width: 80px;
     }
   }
   .menuItems {
@@ -59,7 +62,6 @@
       cursor: pointer;
       &:hover {
         color: var(--pink);
-        
       }
     }
   }
@@ -90,7 +92,7 @@
       width: 100%;
       padding: 20px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.157);
-      animation: mobileMenu .35s ease forwards;
+      animation: mobileMenu 0.35s ease forwards;
       .menuItem {
         font-size: 18px;
         width: 100%;
@@ -110,18 +112,18 @@
   }
 
   .searchBar {
-    width: 80%;
+    width: 100%;
     height: 60px;
     background-color: white;
     position: absolute;
     // right: 10px;
     // margin: 0 10vw;
-    margin:0 12vw;
+    // margin:0 12vw;
     // border-radius: 4px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.12);
-  
+
     top: 14vh;
     animation: mobileMenu 0.4s ease forwards;
     .searchInput {
@@ -145,7 +147,7 @@
         border-radius: 30px 0 0 30px;
         padding: 0 15px;
         font-size: 18px;
-        &::placeholder{
+        &::placeholder {
           color: gray;
         }
         @include md {
