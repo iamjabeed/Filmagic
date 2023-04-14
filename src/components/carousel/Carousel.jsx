@@ -63,8 +63,8 @@ const Carousel = ({ data, loading, endpoint, title }) => {
         {!loading ? (
           <div className="carouselItems" ref={carouselContainer}>
             {data?.map((item) => {
-              const posterUrl = item.poster_path
-                ? url.poster + item.poster_path
+              const posterUrl = item?.poster_path
+                ? url.poster + item?.poster_path
                 : PosterFallback;
 
               return (
@@ -72,7 +72,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                   key={item.id}
                   className="carouselItem"
                   onClick={() =>
-                    navigate(`/${item.media_type || endpoint}/${item.id}`)
+                    navigate(`/${item?.media_type || endpoint}/${item?.id}`)
                   }
                 >
                   <div className="posterBlock">

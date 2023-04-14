@@ -27,13 +27,14 @@ const HeroBanner = () => {
     }
   };
 
-  //* Custome hook for fetching api
+  //* useFetch Custome hook for fetching data from api
 
   const { data, loading } = useFetch("/movie/popular");
-  // console.log(data);
+  console.log(data);
   // console.log(loading);
 
   //? To access the url in store(redux)
+
   const { url } = useSelector((store) => store.home);
   // console.log(url);
 
@@ -55,9 +56,8 @@ const HeroBanner = () => {
       <div className="opacity-layer"></div>
 
       <ContentWrapper>
-        {/* <div className="wrapper"> */}
         <div className="heroBannerContent">
-          <span className="title">Welcome.</span>
+          <span className="title">Welcome to Filmagic 💛</span>
           <span className="sub-title">
             Millions of movies, TV shows and people to discover. Explore now.
           </span>
@@ -69,11 +69,10 @@ const HeroBanner = () => {
               onChange={(e) => setQuery(e.target.value)}
             />
             <button onClick={searchQueryHandlerOnclick}>
-              <HiOutlineSearch size={32}/>
+              <HiOutlineSearch size={32} />
             </button>
           </div>
         </div>
-        {/* </div> */}
       </ContentWrapper>
     </div>
   );

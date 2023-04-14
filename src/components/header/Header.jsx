@@ -35,7 +35,7 @@ const Header = () => {
         setShowSearch(false);
       }, 1000);
     } else if (query.length === 0) {
-      alert("Please enter movie or TV show name");
+      alert("Please enter a movie or TV show name");
     }
   };
 
