@@ -78,7 +78,7 @@ const Header = () => {
           </Link>
         </div>
         <ul className="menuItems">
-          <li className="menuItem" onClick={() => navigationHandler("movies")}>
+          <li className="menuItem" onClick={() => navigationHandler("movie")}>
             Movies
           </li>
           <li className="menuItem" onClick={() => navigationHandler("tv")}>

@@ -6,7 +6,6 @@ import "./style.scss";
 
 import { fetchDataFromApi } from "../../utils/api";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
-import noResults from "../../assets/Not found.png";
 
 import MovieCard from "../../components/movieCard/MovieCard";
 import Spinner from "../../components/spinner/Spinner";
@@ -80,7 +79,7 @@ const SearchResults = () => {
             <span className="resultNotFound">
               No movies that match that name. Please search for something else
               📽️
-              <img src={noResults} alt="noResults" />
+              {/* <img src={noResults} alt="noResults" /> */}
             </span>
           )}
         </ContentWrapper>

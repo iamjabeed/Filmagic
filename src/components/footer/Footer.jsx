@@ -15,13 +15,10 @@ const Footer = () => {
           <div className="logo">
             <img src={Logo} alt="Logo" />
           </div>
-          <div className="content">
-            Millions of movies, TV shows to discover. Explore now.
-          </div>
+          <div className="content">All right reserved &#169; 2023</div>
         </div>
 
         <div className="contactDeatils">
-          <div className="infoText">Made with 💛 by Jabeed.</div>
           <div className="socialIcons">
             <a
               href="https://instagram.com/iamjabeed_04"
@@ -45,6 +42,7 @@ const Footer = () => {
               <FaLinkedin />
             </a>
           </div>
+          <div className="infoText">Made with 💛 by Jabeed.</div>
         </div>
       </ContentWrapper>
     </footer>

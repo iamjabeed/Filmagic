@@ -10,6 +10,8 @@ import VideosSection from "./videoSection/VideoSection";
 import Recommendation from "./carousels/Recommendation";
 import Similar from "./carousels/Similar";
 
+import Spinner from "../../components/spinner/Spinner";
+
 const Details = () => {
   const { mediaType, id } = useParams();
   const { data, loading } = useFetch(`/${mediaType}/${id}/videos`);
@@ -17,17 +19,29 @@ const Details = () => {
     `/${mediaType}/${id}/credits`
   );
 
-  if (!data) return null;
-  if (!credits) return null;
+  // if (!data) return null;
+  // if (!credits) return null;
 
   return (
-    <div className="details_page">
+    <>
+      {/* {data ? (
+        <>
+          <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
+          <Cast data={credits?.cast} loading={creditsLoading} />
+          <VideosSection data={data} loading={loading} />
+          <Recommendation mediaType={mediaType} id={id} />
+          <Similar mediaType={mediaType} id={id} />
+        </>
+      ) : (
+        <Spinner initial={true} />
+      )} */}
+
       <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
       <Cast data={credits?.cast} loading={creditsLoading} />
       <VideosSection data={data} loading={loading} />
       <Recommendation mediaType={mediaType} id={id} />
       <Similar mediaType={mediaType} id={id} />
-    </div>
+    </>
   );
 };
 
