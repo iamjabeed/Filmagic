@@ -6,10 +6,10 @@ import "./style.scss";
 
 import { fetchDataFromApi } from "../../utils/api";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
-import noResults from "../../assets/no-results.png";
+import noResults from "../../assets/Not found.png";
 
-// import MovieCard from "../../components/movieCard/MovieCard";
-// import Spinner from "../../components/spinner/Spinner";
+import MovieCard from "../../components/movieCard/MovieCard";
+import Spinner from "../../components/spinner/Spinner";
 const SearchResults = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -34,7 +34,7 @@ const SearchResults = () => {
         if (data?.results) {
           setData({
             ...data,
-            results: [...data?.results, ...res.results],
+            results: [...data?.results, ...res?.results],
           });
         } else {
           setData(res);
@@ -50,9 +50,41 @@ const SearchResults = () => {
   }, [query]);
 
   return (
-    <div>
-      SearchResults
-      <h2>hello</h2>
+    <div className="searchResultsPage">
+      {loading && <Spinner initial={true} />}
+      {!loading && (
+        <ContentWrapper>
+          {data?.results?.length > 0 ? (
+            <>
+              <div className="pageTitle">
+                {`search ${
+                  data?.total_results > 1 ? "results" : "result"
+                } of "${query}"`}
+              </div>
+              <InfiniteScroll
+                className="content"
+                dataLength={data?.results?.length || []}
+                next={fetchNextPageData}
+                hasMore={pageNum <= data?.total_pages}
+                loader={<Spinner />}
+              >
+                {data?.results?.map((item, index) => {
+                  if (item?.media_type === "person") return;
+                  return (
+                    <MovieCard key={index} data={item} fromSearch={true} />
+                  );
+                })}
+              </InfiniteScroll>
+            </>
+          ) : (
+            <span className="resultNotFound">
+              No movies that match that name. Please search for something else
+              📽️
+              <img src={noResults} alt="noResults" />
+            </span>
+          )}
+        </ContentWrapper>
+      )}
     </div>
   );
 };

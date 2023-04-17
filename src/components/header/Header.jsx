@@ -105,6 +105,7 @@ const Header = () => {
                 type="text"
                 placeholder="Search for a movie or TV show"
                 onKeyUp={searchQueryHandler}
+                autoFocus="true"
                 onChange={(e) => setQuery(e.target.value)}
               />
 
