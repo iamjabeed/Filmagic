@@ -4,79 +4,59 @@
   padding: 50px 0;
   color: white;
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
   .contentWrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
-
+    gap: 20px;
   }
-  .description {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  .logo {
+    height: 80px;
+    img {
+      height: 100%;
+    }
+  }
+  .content {
+    color: #ffffffbb;
+    text-align: left;
+    font-size: 16px;
+    @include md {
+      font-size: 18px;
+    }
+  }
+
+  .infoText {
+    font-size: 16px;
+    line-height: 20px;
+    opacity: 1;
     text-align: center;
-    gap: 20px;
-    max-width: 400px;
-    .logo {
-      height: 80px;
-      img {
-        height: 100%;
-      }
-    }
-    .content {
-      color: #ffffffbb;
-      text-align: left;
-      // font-style: italic;
-      font-size: 16px;
-      @include md {
-        font-size: 18px;
-      }
+    font-weight: 600;
+    @include md {
+      font-size: 18px;
     }
   }
-
-  .contactDeatils {
+  .socialIcons {
     display: flex;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    // border: 2px solid red;
-    gap: 20px;
-    width: 400px;
-    vertical-align: center;
-    .infoText {
-      font-size: 16px;
-      line-height: 20px;
-      opacity: 1;
-      text-align: center;
-      // max-width: 400px;
-      font-weight: 600;
-      @include md {
-        font-size: 18px;
-      }
-    }
-    .socialIcons {
+    justify-content: center;
+    gap: 10px;
+    .icon {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: var(--black2);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      .icon {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: var(--black2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        color: #fff;
-        transition: all ease 0.3s;
-        &:hover {
-          // box-shadow: 0 0 0.321em #ffffff8b;
-          color: var(--pink);
-          scale: 1.1;
-        }
+      cursor: pointer;
+      color: #fff;
+      transition: all ease 0.3s;
+      &:hover {
+        color: var(--pink);
+        scale: 1.1;
       }
     }
   }
