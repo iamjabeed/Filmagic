@@ -30,7 +30,7 @@ const HeroBanner = () => {
   //* useFetch Custome hook for fetching data from api
 
   const { data, loading } = useFetch("/movie/popular");
-  console.log(data);
+  // console.log(data);
   // console.log(loading);
 
   //? To access the url in store(redux)
