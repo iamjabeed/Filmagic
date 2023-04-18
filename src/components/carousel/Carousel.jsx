@@ -35,7 +35,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
     });
   };
 
-  const skItem = () => {
+  const SkItem = () => {
     return (
       <div className="skeletonItem">
         <div className="posterBlock skeleton"></div>
@@ -79,10 +79,10 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                     <Img src={posterUrl} />
                   </div>
                   <div className="textBlock">
-                    <spam className="title">{item?.name || item?.title}</spam>
-                    <spam className="date">
+                    <span className="title">{item?.name || item?.title}</span>
+                    <span className="date">
                       {dayjs(item?.release_Date).format("MMM D, YYYY")}
-                    </spam>
+                    </span>
 
                     <div className="ratingGenres">
                       <CircleRating rating={item?.vote_average.toFixed(1)} />
@@ -95,12 +95,12 @@ const Carousel = ({ data, loading, endpoint, title }) => {
           </div>
         ) : (
           <div className="loadingSkeleton">
-            {skItem()}
-            {skItem()}
-            {skItem()}
-            {skItem()}
-            {skItem()}
-            {skItem()}
+            {SkItem()}
+            {SkItem()}
+            {SkItem()}
+            {SkItem()}
+            {SkItem()}
+            {SkItem()}
           </div>
         )}
       </ContentWrapper>

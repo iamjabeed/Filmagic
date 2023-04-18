@@ -85,10 +85,12 @@ const DetailsBanner = ({ video, crew }) => {
                       {data?.vote_average.toFixed(1)}
                        <img src={startIcon} alt="startIcon" />
                       </span> */}
-                      <div className="playbtn"
-                      onClick={()=>{setShow(true)
-                      setVideoId(video?.key)}
-                      }
+                      <div
+                        className="playbtn"
+                        onClick={() => {
+                          setShow(true);
+                          setVideoId(video?.key);
+                        }}
                       >
                         <PlayIcon />
                         <span className="text">Watch Trailer</span>
@@ -125,7 +127,7 @@ const DetailsBanner = ({ video, crew }) => {
                       )}
                     </div>
 
-                    {director.length > 0 && (
+                    {director?.length > 0 && (
                       <div className="info">
                         <span className="text bold">Director: {""}</span>
                         <span className="text">

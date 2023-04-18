@@ -4,7 +4,7 @@
   position: fixed;
   transform: translateY(0);
   width: 100%;
-  height: 75px;
+  height: 60px;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -24,7 +24,9 @@
   // &.hide {
   //   transform: translateY(-60px);
   // }
-
+  @include md {
+    height: 75px;
+  }
   .contentWrapper {
     display: flex;
     align-items: center;
@@ -34,7 +36,7 @@
     cursor: pointer;
     img {
       height: 100px;
-      //   width: 80px;
+        // width: 80px;
     }
   }
   .menuItems {
@@ -114,23 +116,32 @@
   .searchBar {
     width: 100%;
     height: 60px;
-    background-color:#FFF;
+    background-color: var(--black3);
     position: absolute;
+    color: #fff;
     // color: #000000;
     // right: 10px;
     // margin: 0 10vw;
     // margin:0 12vw;
     // border-radius: 4px;
 
-
-    top: 75px;
+    top: 0;
     animation: mobileMenu 0.4s ease forwards;
+    @include md {
+      height: 75px;
+    }
     .searchInput {
       display: flex;
       align-items: center;
+      justify-content: center;
       height: 40px;
       margin-top: 10px;
+      position: relative;
+     
       width: 100%;
+      @include md{
+        margin-top: 20px;
+      }
       svg {
         font-size: 24px;
         flex-shrink: 0;
@@ -140,14 +151,15 @@
       input {
         width: 100%;
         height: 50px;
-        background-color: #FFF;
+        background-color: var(--black3);
         outline: 0;
+        color: #fff;
         border: 0;
-        border-radius: 30px 0 0 30px;
+        // border-radius: 30px 0 0 30px;
         padding: 0 15px;
         font-size: 18px;
         &::placeholder {
-          color: rgb(0, 0, 0);
+          color: rgba(255, 255, 255, 0.46);
         }
         @include md {
           height: 60px;

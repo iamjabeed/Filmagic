@@ -10,7 +10,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
-import NotFound from "./pages/404/NotFound";
+import NotFound from "./pages/404/PageNotFound";
 import Explore from "./pages/explore/Explore";
 import SearchResults from "./pages/searchResults/SearchResults";
 

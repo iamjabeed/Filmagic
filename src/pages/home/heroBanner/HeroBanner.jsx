@@ -50,7 +50,12 @@ const HeroBanner = () => {
       {/* Lazy loading (Img) */}
       {!loading && (
         <div className="backdrop-img">
-          <Img src={background} />
+          <Img
+            src={
+              background ||
+              "https://image.tmdb.org/t/p/original/wybmSmviUXxlBmX44gtpow5Y9TB.jpg"
+            }
+          />
         </div>
       )}
       <div className="opacity-layer"></div>

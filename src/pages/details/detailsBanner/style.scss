@@ -49,11 +49,16 @@
     .left {
       flex-shrink: 0;
       .posterImg {
-        width: 100%;
+        width: 50%;
         display: block;
         border-radius: 12px;
+        margin: 0 auto;
         @include md {
           max-width: 350px;
+          width: 80%;
+        }
+        @include xl{
+          width: 100%;
         }
       }
     }
@@ -125,18 +130,18 @@
           stroke-dashoffset: 680;
           stroke: white;
           transform: translateY(0);
-          transition: all .69s ease-in-out;
+          transition: all 0.69s ease-in-out;
         }
         .circle {
           stroke: white;
           // stroke-dasharray: 650;
           // stroke-dashoffset: 1300;
-          transition: all .69s ease-in-out;
+          transition: all 0.69s ease-in-out;
         }
         &:hover {
           .text {
             // color: var(--pink);
-            opacity: .75;
+            opacity: 0.75;
           }
           .triangle {
             stroke-dashoffset: 0;

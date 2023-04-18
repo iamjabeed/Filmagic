@@ -1,7 +1,7 @@
 @import "../../../mixins.scss";
 
 .heroBanner {
-  // padding-top: 75px;
+  padding-top: 80px;
   width: 100%;
   height: 80vh;
   display: flex;
@@ -17,10 +17,13 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 75px;
+    top: 60px;
     left: 0;
     overflow: hidden;
     opacity: 0.5;
+    @include md{
+      top: 75px;
+    }
     // z-index: -1;
     .lazy-load-image-background {
       width: 100%;

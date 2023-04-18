@@ -101,11 +101,12 @@ const Header = () => {
         <div className="searchBar">
           <ContentWrapper>
             <div className="searchInput">
+              <HiOutlineSearch />
               <input
                 type="text"
-                placeholder="Search for a movie or TV show"
+                placeholder="Breaking Bad..."
                 onKeyUp={searchQueryHandler}
-                autoFocus="true"
+                autoFocus={true}
                 onChange={(e) => setQuery(e.target.value)}
               />
 
