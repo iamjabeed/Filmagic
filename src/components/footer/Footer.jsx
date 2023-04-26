@@ -1,5 +1,6 @@
 import React from "react";
 import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import {BsGithub} from "react-icons/bs"
 
 import Logo from "../../assets/FilmagicLogo (1).png";
 
@@ -18,6 +19,13 @@ const Footer = () => {
        
         <div className="infoText">Made with 💛 by Jabeed.</div>
         <div className="socialIcons">
+          <a
+            href="https://github.com/iamjabeed"
+            target="_blank"
+            className="icon"
+          >
+            <BsGithub />
+          </a>
           <a
             href="https://instagram.com/iamjabeed_04"
             target="_blank"
