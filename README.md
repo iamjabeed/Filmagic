@@ -1,4 +1,2 @@
-# Filmagic
->Tech stacks: ReactJs, Redux Toolkit, SCSS, days, axios, react-router, react player, Vite
-> Key features:
-## LIVE
+# Filmagic - Movie Hub
+>Tech stacks: ReactJs, Redux Toolkit, SCSS, day.js, axios, react-router, react player
