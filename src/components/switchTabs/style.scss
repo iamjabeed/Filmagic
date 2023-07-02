@@ -1,12 +1,12 @@
 .switchingTabs {
-  height: 35px;
+  height: 45px;
   background-color: white;
-  border-radius: 20px;
-  padding: 2px;
+  // border-radius: 20px;
+  padding: 4px;
   .tabItems {
     display: flex;
     align-items: center;
-    height: 30px;
+    height: 35px;
     position: relative;
     .tabItem {
       height: 100%;
@@ -14,8 +14,9 @@
       align-items: center;
       justify-content: center;
       width: 100px;
-      color: var(--black);
+      color: #000;
       font-size: 14px;
+      font-weight: 700;
       position: relative;
       z-index: 1;
       cursor: pointer;
@@ -25,10 +26,10 @@
       }
     }
     .movingBg {
-      height: 30px;
+      height: 35px;
       width: 100px;
-      border-radius: 15px;
-      background-image: var(--gradient);
+      // border-radius: 15px;
+      background: var(--pink);
       position: absolute;
       left: 0;
       transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) .35s;

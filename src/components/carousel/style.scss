@@ -13,10 +13,12 @@
   .arrow {
     font-size: 10px;
     padding: 4px;
-    height: 34px;
-    width: 34px;
-    background: #ffffff;
-    color: var(--black2);
+    border-radius: 0;
+    height: 40px;
+    width: 40px;
+    // background: #ffffff;
+    // color: var(--black2);
+    color:  #ffffff;
     position: absolute;
     top: 44%;
     transform: translateY(-50%);

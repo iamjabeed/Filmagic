@@ -1,0 +1,101 @@
+@import "../../../mixins.scss";
+
+.container {
+  // background: #000;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  //   border: 2px solid rgb(4, 255, 0);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  @include md {
+    flex-direction: row;
+  }
+  .img-parent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 500px;
+    // border: 2px solid red;
+
+    .img-div {
+      position: absolute;
+      transition: transform 0.2s ease;
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      img {
+        width: 100px;
+      }
+
+      &.img-1 {
+        left: 148px;
+        // z-index: 10;
+      }
+
+      &.img-2 {
+        top: 22px;
+        // z-index: 10;
+      }
+
+      &.img-3 {
+        bottom: 22px;
+        // z-index: 10;
+      }
+
+      &.img-4 {
+        right: 148px;
+        // z-index: 10;
+      }
+    }
+  }
+  .description {
+    width: 400px;
+    h1 {
+      color: var(--pink);
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      @include md {
+        font-size: 30px;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      color: rgb(197, 193, 193);
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      //   line-height: 18px;
+      @include md {
+        font-size: 18px;
+        // line-height: 14px;
+      }
+    }
+    button {
+      margin-top: 2rem;
+      padding: 10px 30px;
+      font-size: 14px;
+      text-transform: uppercase;
+      background: transparent;
+      color: #fff;
+      outline: none;
+      border: none;
+      background: var(--pink);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}

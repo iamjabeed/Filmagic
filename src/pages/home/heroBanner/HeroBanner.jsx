@@ -64,7 +64,7 @@ const HeroBanner = () => {
         <div className="heroBannerContent">
           <span className="title">Welcome to Filmagic</span>
           <span className="sub-title">
-            Millions of movies, TV shows to discover. Explore now.
+          Unleash your inner film buff. Dive into a vast library of movies and TV shows.
           </span>
           <div className="searchInput">
             <input
